@@ -90,6 +90,7 @@ async def run_chainstack_ws():
 async def main():
     """Main entry point to run the bot."""
     logging.info("Starting Telegram bot...")
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 
